@@ -1,14 +1,18 @@
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 92px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .header__menu {
-  margin-right: 209px;
+  justify-self: start;
+}
+
+.header__address {
+  justify-self: end;
 }
 
 .header__links-list {
@@ -38,7 +42,6 @@
 }
 
 .header__logo {
-  margin-right: auto;
   width: 148px;
   height: 105px;
 }
@@ -60,6 +63,7 @@
 }
 
 .cover {
+  max-width: 1440px;
   padding: 170px 50px 50px 50px;
   position: relative;
   z-index: 1;
@@ -68,10 +72,10 @@
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .overlay {
@@ -113,7 +117,6 @@
 }
 
 .cover__description {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -133,7 +136,6 @@
 }
 
 .bet-button {
-  /* fewfwfwef */
   border: 1px solid #FFF;
   color: #fff;
   padding: 12px 32px;
@@ -168,8 +170,7 @@
 }
 
 .lots__card-list-item {
-  flex-grow: 1;
-  width: 430px; /* если поставить max-w или min-w получается не очень @_@ */
+  flex: 1 0 430px;
   min-height: 450px;
 }
 
